@@ -41,7 +41,7 @@ void func(int sockfd)
 		write(sockfd, buff, sizeof(buff));
 		bzero(buff, sizeof(buff));
 		read(sockfd, buff, sizeof(buff));
-		printf("From Server : %s", buff);
+		printf("Translated word : %s\n", buff);
 		bzero(buff, sizeof(buff));
 		printf("\nSend again? Y or N. ");
 		n = 0;
