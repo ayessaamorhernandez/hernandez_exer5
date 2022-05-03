@@ -88,10 +88,11 @@ void func(int connfd)
 		read(connfd, buff, sizeof(buff));
 
 		// print buffer which contains the client contents
-		printf("From client: %s\t To client : ", buff);
+		printf("\nReceived word: %s\n", buff);
 
 		lowerCaseStr(buff);
 		word = pigLatin(buff);
+		printf("Translated word: %s\n", word);
 
 		// and send that buffer to client
 		write(connfd, word, sizeof(word));
